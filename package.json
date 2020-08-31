@@ -7,7 +7,7 @@
     "test": "jest",
     "lint": "eslint src/**",
     "lint-fix": "eslint src/** --fix",
-    "success_message":"echo thanks for committing $GIT_AUTHOR_NAME"
+    "success_message":"echo thanks for committing $ GIT_AUTHOR_NAME"
   },
   "husky": {
     "hooks": {
