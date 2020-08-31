@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "pre-commit": "test"
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm test"
+      }
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "pre-commit": "^1.2.2"
   }
 }
