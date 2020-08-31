@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint":"eslint src/**",
-    "lint-fix":"eslint src/** --fix"
+    "lint": "eslint src/**",
+    "lint-fix": "eslint src/** --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
+      "pre-commit": "lint-staged",
       "pre-push": "npm test"
     }
   },
@@ -22,6 +22,10 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "lint-staged": "^10.2.13"
+  },
+  "lint-staged":{
+    "*.js":["eslint","jest --findRelatedTests"]
   }
 }
