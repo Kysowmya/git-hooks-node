@@ -6,11 +6,13 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint src/**",
-    "lint-fix": "eslint src/** --fix"
+    "lint-fix": "eslint src/** --fix",
+    "success_message":"echo thanks for committing $GIT_AUTHOR_NAME"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
+      "post-commit":"npm run success_message",
       "pre-push": "npm test"
     }
   },
